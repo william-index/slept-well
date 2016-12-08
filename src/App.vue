@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <h1>{{ foo }}</h1>
-    <h2>Essential Links</h2>
     <button @click="testFoo">Click me</button>
   </div>
 </template>
