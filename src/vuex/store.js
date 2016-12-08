@@ -4,12 +4,12 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const state = {
-  foo: 'baz'
+  foo: 0
 };
 
 const mutations = {
   SAMPLE_MUTATION (state) {
-    state.foo = 'bar';
+    state.foo++;
   }
 };
 
