@@ -1,0 +1,53 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /dist
+  static_dir: dist
+  secure: always
+
+- url: .*
+  script: routes.app
+  login: admin
+  secure: always
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: latest
+- name: ssl
+  version: latest
+
+skip_files:
+#File Types
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.csv
+- ^(.*/)?.*\.p12
+- ^(.*/)?.*\.pem
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*\.scss
+- ^(.*/)?.*\.sql
+- ^(.*/)?.*\.soy
+- ^(.*/)?.*\.log
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?\.DS_Store
+- ^(.*/)?\.coveragerc
+- ^(.*/)?\.stylelintrc
+
+#Root Directory
+- ^libs/PIL/.*
+- ^apptests/.*
+- ^tests/.*
+- ^node_modules/.*
+- ^\.git/.*
+- package.json
+- README.md
+- Makefile

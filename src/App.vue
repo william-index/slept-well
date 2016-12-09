@@ -26,7 +26,7 @@ export default {
     }
   }
 }
-</script>
+</script>Goku
 
 <style>
 #app {
